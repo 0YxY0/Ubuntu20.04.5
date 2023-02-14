@@ -3,12 +3,12 @@ pipeline {
 
 	stages {
 		stage('compile') {
-			step {
+			steps {
 				sh "gcc main.c"
 			}
 		}
 		stage('print') {
-			step {
+			steps {
 				sh "./a.out"
 			}
 		}
