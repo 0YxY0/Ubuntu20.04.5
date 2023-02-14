@@ -3,13 +3,13 @@ pipeline {
 
 	stages {
 		stage('compile') {
-			steps {
-				gcc main.c
+			step {
+				sh "gcc main.c"
 			}
 		}
 		stage('print') {
-			steps {
-				./a.out
+			step {
+				sh "./a.out"
 			}
 		}
 	}
